@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+//firstly we will input the two numbers.
+    int a;
+    double b;
+    cout << "Enter first number:";
+    cin >> a;
+    cout << "enter second number:";
+    cin >> b;
+
+// now we will perorm operators on two numbers.
+    double sum = a+b;
+    double diff = a-b;
+    double pro = a*b;
+    double div = a/b;
+    double rem = a%(int)b;
+
+// now we will print all of them 
+    cout << "Sum = " << sum << endl;
+    cout << "Difference = " << diff << endl;
+    cout << "Product = " << pro << endl;
+    cout << "Division = " << div << endl;
+    cout << "Remainder = " << rem << endl;
+
+    return 0;
+
+}
