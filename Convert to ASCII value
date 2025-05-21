@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+//This will convery any alphabet to its ASCII value.
+int main(){
+    char i;
+    cout << "Enter the number:";
+    cin >> i;
+
+
+    cout << (int)i;
+
+    return 0;
+}    
