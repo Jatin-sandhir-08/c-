@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+    int main() {
+//Clasify variables.
+        int a,b;
+        char c;
+
+//Take all Inputs.
+        cout << "Enter First Number:";
+        cin >> a;
+        cout << "Enter Second Number:";
+        cin >> b;
+        cout << "Enter Operator(+,-,*,/):";
+        cin >> c;
+
+//Perform calculation as per operators.
+        if(c == '+'){
+            cout << a+b << endl;
+        } else if(c == '-'){
+            cout << a-b << endl;
+        } else if(c == '*'){
+            cout << a*b << endl;
+        } else if(c == '/'){
+            cout << a/b << endl;
+        } else{
+            cout << "Invalid Operator!" << endl;
+        }
+
+
+        return 0;
+    }
+    
