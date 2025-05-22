@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    int i = 2;
+    cout << "Enter the number:";
+    cin >> n;
+    bool prime = true; //We Start by considering that the number n is prime.
+
+    while(i <= n-1){
+        if(n%i == 0){
+            prime = false; //If this happens, this will contradict our supposition and also break the loop.
+            break;
+        } else{
+            i = i + 1;//It will again check the condition by increased value of i.
+        }
+    }
+    
+    if(prime == true){
+        cout << "Prime"<<endl;
+
+    } else if (prime == false){
+        cout << "Non-Prime"<<endl;
+    }
+    
+    return 0;
+}
