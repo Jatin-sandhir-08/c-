@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int dec(int n){
+    int i=1, sum=0;
+    while(n>0){
+        int rem = n%10;
+        n = n/10;
+        sum = sum+rem*i;
+        i = i*2;
+    }
+    return sum;
+}
+
+int main(){
+    int n;
+    cout << "enter number:";
+    cin >> n;
+    cout << dec(n);
+
+    return 0;
+}
