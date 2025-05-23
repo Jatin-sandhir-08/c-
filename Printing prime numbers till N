@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+
+//this function checks whether a number is prime or not.
+bool prime(int n){
+    bool isprime = true;
+    int i = 2;
+    if(n <=1){
+        return false;
+    }
+    while(i <= n-1){
+        if(n%i == 0){
+            return false;
+        } else{
+            i = i+1;
+        }
+    }
+}
+
+//this is the main function. It sends value to prime function, to which the function return whether it is prime or not.
+int main(){
+    int n;
+    cout << "enter n:";
+    cin >> n;
+    int k = 2;// It sends value of k 1 by 1 from 2 to n.
+    while(k<=n){
+        bool isprime =prime(k);
+        if(isprime == true){ // If the number returns to be prime, it will be printed.
+            cout <<  k << " ";
+        }    
+        k = k+1;
+      
+    }
+
+    return 0;
+}
