@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+//This function converts any integer into its binary number.
+int binary(int n){
+    int i = 1;
+    int ans = 0;
+    while(n>0){
+        int rem = n%2;
+        n = n/2;
+        ans = ans+rem*i;
+        i = i*10;
+    }
+    return ans;
+}
+
+//This takes input, uses binary function and gives output as binary number.
+int main(){
+    int n;
+    cout << "Enter N:";
+    cin >> n;
+
+    cout << binary(n);
+
+    return 0;
+}
