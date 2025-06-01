@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int rev = 0,n;
+    cout << "Enter the number:"; //input the number.
+    cin >> n;
+
+    while(n>0){
+        int lastdig = n%10; //get the last digit.
+        rev = rev*10 + lastdig; //make a zero on end of reversed number and add last digit.
+        n = n/10;
+    }
+    cout << rev << endl;
+
+    return 0;
+}
