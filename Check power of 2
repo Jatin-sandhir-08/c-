@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+bool divby2 = true; //start by considering that it is power of 2. divby2 in reality means power of 2.
+int n;
+
+int main(){
+    cout << "Enter the number:";
+    cin >> n;
+
+    while(n>2){
+        if(n%2 == 0){ //if the number is divisible by 2 then we will divide it by 2 and again check the modulo. 
+            n = n/2;
+        } else{
+            divby2 = false; //at any case, if it is not divisible by 2 then it will not be power of 2.
+            break;
+        }
+    }
+    
+    if(divby2 == true){
+        cout << "It is power of 2" << endl;
+    } else{
+        cout << "It is not power of 2" << endl;
+    }
+
+    return 0;
+}
