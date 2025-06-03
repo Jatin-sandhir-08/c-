@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arr[] = {2,4,6,3,346,5,46,454,6}; //This is the array of which we have to get sum.
+    int size = sizeof(arr)/sizeof(arr[0]); //This helps to get the size of array.
+    int i = 0, sum = 0;
+    while(i <= size-1){
+        sum = sum + arr[i]; //This gets the sum of enteries according to the value of i from 0 to size-1.
+        i = i+1;
+    }
+    cout << sum << endl; //Print sum obtained above.
+
+    return 0;
+}
