@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int max(int a, int b){ //this function takes 2 number as input and return max number
+    int max;
+    if(a>b){
+        max = a;
+    } else{
+        max = b;
+    }
+    return max;
+}
+
+int main(){
+    int cursum = 0, maxsum = INT_MIN; //start by considering current sum = 0 and maxsum = smallest number
+    int arr[] = {1,2,3,4,5}; //given array
+    int size = sizeof(arr)/sizeof(arr[0]); //finding size of array
+
+    for(int i = 0; i < size; i++){
+        cursum += arr[i]; //adding all elements to current sum.
+        if(cursum>0){ //if cursum > 0 then continue.
+            maxsum = max(maxsum,cursum); 
+        } else{ //if cursum < 0 then start again by a new subarray
+            cursum = 0;
+        }
+    }
+    cout << maxsum << endl;
+
+    return 0;
+}
