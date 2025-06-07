@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    int arr[] = {1,2,3,4,5}; //This is the given array 
+    int size = sizeof(arr)/sizeof(arr[0]); //this helps to find size of array
+    for(int st = 0; st < size ; st++){ //this decides the starting point
+        for(int end = st; end < size; end++){ //this decides the end point
+            cout << arr[end]; 
+        }
+        cout << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
