@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//we will define a function that will return the maximun of 2.
+int max(int m, int n){
+    int a;
+    if(m>n){
+        a = m;
+    } else{
+        a = n;
+    }
+    return a;
+}
+
+int main(){
+    int arr[] = {1,2,3,4,5}; //given array
+    int size = sizeof(arr)/sizeof(arr[0]); //find size of array
+    int maxsum = INT_MIN;
+    for(int st = 0; st < size ; st++){
+         int cursum = 0;
+        for(int end = st; end < size; end++){
+            cursum += arr[end]; //add every element of subarray
+                     
+        } 
+        maxsum = max(maxsum,cursum);  
+    }
+    cout << maxsum << endl;
+
+    return 0;
+}
