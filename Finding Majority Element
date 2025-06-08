@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    vector<int> vec = {24,48,48,64,48,94,48}; //this is the given vector
+    int size = vec.size(); //finding size of vector
+
+    sort(vec.begin(),vec.end()); //sorting the vector
+    
+    
+    int freq = 1, maxfreq = 1, ans = vec[0]; //considering some conditions
+    for(int i=1;i<size;i++){
+        if(vec[i] == vec[i-1]){ //if any element repeats, increase its freq
+            freq = freq+1;
+        } else{
+            freq = 1;
+            
+        }
+        if(freq > maxfreq){ //for any number, if freq exceeds maxfreq, then update maxfreq
+            maxfreq = freq;
+            ans = vec[i];
+        }
+    }
+    if(maxfreq > size/2){ //it will be majority iff its occurs more than half
+        cout <<"Majority element:" << ans << endl;    
+    } else{
+        cout << "No Majority element" << endl;
+    }
+    
+
+    return 0;
+}
