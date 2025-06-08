@@ -1,0 +1,31 @@
+#include <iostream> 
+using namespace std;
+
+int main(){
+//firstly we will get the size of array, define some integers and input target
+    int arr[] = {1,4,6,8,9};
+    int size = sizeof(arr)/ sizeof(arr[0]);
+    int i = 0, j = size-1,target, ans, x, y;
+    cout << "Enter Target Sum:";
+    cin >> target;
+
+    while(i<j){
+        int pairsum = arr[i]+arr[j]; //we will check the pairsum with target and change value of i&j accourding to it.
+        if(pairsum > target){
+            j = j-1;
+        } else if(pairsum < target){
+            i = i+1;
+        } else if(pairsum == target){
+            x = arr[i], y = arr[j];
+            break;
+        } 
+        
+    }
+     if(x != 0 && y != 0){
+            cout << "Pair is:" << x << ", " << y << endl;
+    } else{ //it happens when no pair is found
+            cout << "Error 404\npair not found!" << endl;
+    }
+
+    return 0;
+}
